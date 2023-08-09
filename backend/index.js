@@ -9,7 +9,7 @@ const Post=require('./models/PostModel')
 const app=express()
 app.use(cookieParser())
 const PORT=process.env.PORT||4000
-app.use(cors({credentials:true,origin:'http://localhost:3000'}))
+app.use(cors({credentials:true,origin:'https://blog-mern-8yfu.onrender.com/'}))
 app.use(express.json())
 app.use('/uploads',express.static(__dirname+'/uploads'))
 
