@@ -9,7 +9,7 @@ const Post=require('./models/PostModel')
 const app=express()
 app.use(cookieParser())
 const PORT=process.env.PORT||4000
-app.use(cors({credentials:true,origin:'https://64d3d4964f5acf0aea6b1b7c--effortless-yeot-69d976.netlify.app'}))
+app.use(cors({credentials:true,origin:'https://blogspots.netlify.app'}))
 app.use(express.json())
 app.use('/uploads',express.static(__dirname+'/uploads'))
 
