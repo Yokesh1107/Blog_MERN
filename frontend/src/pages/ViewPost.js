@@ -10,7 +10,7 @@ const ViewPost = () => {
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();
   useEffect(() => {
-    fetch(`http://localhost:2003/post/${id}`)
+    fetch(`https://blog-mern-8yfu.onrender.com/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -25,7 +25,7 @@ const ViewPost = () => {
   return (
     <div className='viewPost'>
     <div className='cover'>
-    <img src= {`http://localhost:2003/${postInfo.cover}`} />
+    <img src= {`https://blog-mern-8yfu.onrender.com/${postInfo.cover}`} />
     </div>
     <div className='title'>{postInfo.title}</div>
     <div className='details'>
