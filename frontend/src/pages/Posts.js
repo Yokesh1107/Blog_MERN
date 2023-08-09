@@ -7,7 +7,7 @@ const Posts = () => {
   const navigate=useNavigate()
   const[posts,setPosts]=useState([])
   useEffect(()=>{
-        const res=fetch('http://localhost:2003/post/').then(response=>{
+        const res=fetch('https://blog-mern-8yfu.onrender.com/post/').then(response=>{
             response.json().then(posts=>{
                 setPosts(posts)
             })
