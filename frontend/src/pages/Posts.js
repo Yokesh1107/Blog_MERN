@@ -6,8 +6,7 @@ const Posts = () => {
     const {userInfo,setUserInfo}=useContext(UserContext)
   const navigate=useNavigate()
   const[posts,setPosts]=useState([])
- const coo=document.cookie
-    useEffect(()=>{
+  useEffect(()=>{
         const res=fetch('http://localhost:2003/post/').then(response=>{
             response.json().then(posts=>{
                 setPosts(posts)
@@ -16,6 +15,7 @@ const Posts = () => {
         
         
     },[])
+    const coo=document.cookie
     if(coo==='token='){
         return navigate('/')
     }

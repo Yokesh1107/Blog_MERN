@@ -18,7 +18,7 @@ const Login = () => {
       res.json().then(userInfo=>{
         setUserInfo(userInfo)
       })
-      console.log(document.cookie)
+      
       return navigate('/')
     }
   }
