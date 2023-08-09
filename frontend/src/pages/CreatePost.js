@@ -17,7 +17,7 @@ const CreatePost = () => {
         data.append('file',file[0])
         data.append('files',file[1])
     e.preventDefault()
-    const res=await fetch('http://localhost:2003/post/create',{
+    const res=await fetch('https://blog-mern-8yfu.onrender.com/post/create',{
       method:'POST',
       credentials:'include',
       body:data,
