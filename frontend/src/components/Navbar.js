@@ -6,7 +6,7 @@ import { UserContext } from './UserContext';
 const Navbar = () => {
   const {setUserInfo,userInfo}=useContext(UserContext)
   useEffect(()=>{
-    fetch('http://localhost:2003/auth/profile',{
+    fetch('https://blog-mern-8yfu.onrender.com/auth/profile',{
      credentials:'include',
      headers:{'Content-Type':'application/json'},
      method:'GET',
@@ -18,7 +18,7 @@ const Navbar = () => {
    })
  },[])
   const logoutFun=()=>{
-    fetch('http://localhost:2003/auth/logout',{
+    fetch('https://blog-mern-8yfu.onrender.com/auth/logout',{
       method:'POST',
       credentials:'include'
     })
