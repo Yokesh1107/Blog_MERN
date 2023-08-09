@@ -7,7 +7,7 @@ const Register = () => {
   const [password,setPassword]=useState('')
   const registerFun=async(e)=>{
     e.preventDefault()
-    const res=await fetch('http://localhost:2003/auth/register',{
+    const res=await fetch('https://blog-mern-8yfu.onrender.com/auth/register',{
       method:'POST',
       body:JSON.stringify({username,password}),
       headers:{'Content-type':'application/json'},
