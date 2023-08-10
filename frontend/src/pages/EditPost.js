@@ -13,7 +13,7 @@ const EditPost = () => {
   const navigate=useNavigate()
 
   useEffect(()=>{
-    fetch('http://localhost:2003/post/'+id).then(res=>{
+    fetch('https://blog-mern-8yfu.onrender.com/post/'+id).then(res=>{
       res.json().then(postInfo=>{
         setTitle(postInfo.title)
         setSummary(postInfo.summary)
@@ -31,7 +31,7 @@ const EditPost = () => {
     if(file?.[0]){
       data.append('file',file?.[0])
     }
-    const res= await fetch('http://localhost:2003/post/',{
+    const res= await fetch('https://blog-mern-8yfu.onrender.com/post/',{
       method:'PUT',
       body:data,
       credentials:'include',

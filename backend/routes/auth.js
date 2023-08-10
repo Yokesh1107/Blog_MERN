@@ -50,6 +50,7 @@ router.post('/logout',async(req,res)=>{
     res.cookie('token','').json('ok')
 })
 
+
 router.get('/profile',async(req,res)=>{
     const {token}=req.cookies
     if(!token)return ''

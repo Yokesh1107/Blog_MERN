@@ -8,7 +8,7 @@ const Login = () => {
   const {setUserInfo}=useContext(UserContext)
   const loginFun=async(e)=>{
     e.preventDefault()
-    const res=await fetch('http://localhost:2003/auth/login',{
+    const res=await fetch('https://blog-mern-8yfu.onrender.com/auth/login',{
       method:'POST',
       body:JSON.stringify({username,password}),
       headers:{'Content-type':'application/json'},
