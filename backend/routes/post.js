@@ -5,13 +5,21 @@ const router=require('express').Router()
  const fs=require('fs')
  require('dotenv').config()
  const secret=process.env.SECRET
-
+const session=require('express-session')
  const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
         cb(null,"uploads")
     }
  })
  const upload=multer({storage:storage})
+app.use(session({
+    resave:"true",
+    saveUninitialized:"true",
+    secret:process.env.SECRET,
+    cookie:{
+        sameSite:"none",
+    },
+}))
 
  router.post('/create',upload.single('file'),async(req,res)=>{
     
