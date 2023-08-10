@@ -16,7 +16,7 @@ app.use('/uploads',express.static(__dirname+'/uploads'))
 app.use(session({
     resave:"true",
     saveUninitialized:"true",
-    secret:process.env.secret,
+    secret:process.env.SECRET,
     cookie:{
         sameSite:"none",
     },
