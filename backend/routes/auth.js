@@ -34,10 +34,7 @@ const secret=process.env.SECRET
             if(err)throw err
             res.cookie('token',token).json({id:user._id,username})
             // localStorage.setItem("token",token)
-         Cookies.set('token', token, {
-    sameSite: 'none',
-    secure: true
-  })
+        document.cookie = "witcher=Geralt; SameSite=None; Secure"
     
         })
     }else{
