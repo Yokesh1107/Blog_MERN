@@ -3,6 +3,8 @@ const router=require('express').Router()
  const multer=require('multer')
  const jwt=require('jsonwebtoken')
  const fs=require('fs')
+const express=require('express')
+const app=express()
  require('dotenv').config()
  const secret=process.env.SECRET
 const session=require('express-session')
