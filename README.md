@@ -4,12 +4,18 @@ This is a Full stack Blog app developed with React.js, Node.js and Express.js. A
 
 ## INSTALLATION
 ### FRONTEND
+
 cd frontend
+
 npm i
+
 npm start
+
 ### BACKEND
 cd backend
+
 npm i
+
 npm start
 
 
